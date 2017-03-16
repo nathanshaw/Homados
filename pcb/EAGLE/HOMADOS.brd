@@ -815,7 +815,7 @@ design rules under a new name.</description>
 <polygon width="0.8128" layer="1">
 <vertex x="0" y="68.58"/>
 <vertex x="127.762" y="68.58" curve="-90"/>
-<vertex x="128.27" y="66.802"/>
+<vertex x="128.27" y="68.072"/>
 <vertex x="128.27" y="0"/>
 <vertex x="0" y="-0.762"/>
 </polygon>

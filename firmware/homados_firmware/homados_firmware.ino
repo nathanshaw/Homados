@@ -14,7 +14,7 @@
 // on H1 10, 12, 14, 16 are broken
 # define NUM_SOLENOIDS 16
 // botnum/board type/board num
-#define BOT_ID 2
+#define BOT_ID 3
 #define BOT_TYPE 2
 #define ARDUINO_ID 1
 
@@ -45,9 +45,9 @@ void setup() {
   Serial.begin(57600);
 
   // interrupt timer parameters, these need to change
-  //TCCR2A = 1;
-  //TCCR2B = 3;
-  //TIMSK2 = 1;
+  TCCR2A = 1;
+  TCCR2B = 3;
+  TIMSK2 = 1;
 
   pinMode(LED_POWER, OUTPUT);
   pinMode(LED_STATUS, OUTPUT);
@@ -65,7 +65,7 @@ void setup() {
     digitalWrite(actuators[i], LOW);
   }
   delay(1000);
-  digitalWrite(LED_POWER, LOW);
+  
 }
 
 ISR(TIMER2_OVF_vect) {
@@ -108,6 +108,7 @@ void loop() {
         Serial.write(BOT_TYPE);
         Serial.write(ARDUINO_ID);
         handshake = 1;
+        digitalWrite(LED_POWER, LOW);
       }   
       if (pitch >= 0 && pitch <= NUM_SOLENOIDS) {
         statustimer = 120;
