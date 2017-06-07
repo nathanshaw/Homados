@@ -36,8 +36,8 @@ int statustimer = 0;
 // actuator pins
 
 int actuators[] = {
-  2, 3, 4, 5, 6, 7, 8, 9, 10, 
-  22, 24, 26, 28, 30, 32, 34
+  10, 9, 8, 7, 6,
+  5, 4, 3, 2, 22, 24, 26, 28, 30, 32, 34
 };
 
 
@@ -54,17 +54,7 @@ void setup() {
   digitalWrite(LED_STATUS, HIGH);
   digitalWrite(LED_POWER, HIGH);
 
-  for (int i = 0; i < NUM_SOLENOIDS; i++) {
-    pinMode(actuators[i], OUTPUT);
-    if (BOOT_TEST == 1){
-      digitalWrite(actuators[i], HIGH);
-      delay(60);
-      digitalWrite(actuators[i], LOW);
-      delay(100);  
-    }
-    digitalWrite(actuators[i], LOW);
-  }
-  delay(1000);
+  bootTest();
   
 }
 
@@ -88,7 +78,19 @@ ISR(TIMER2_OVF_vect) {
   }
 }
 
+void bootTest() {
+  for (int i = 0; i < NUM_SOLENOIDS; i++) {
+    pinMode(actuators[i], OUTPUT);
+    if (BOOT_TEST == 1){
+      notes[i] = 200;
+      delay(350);  
+    }
+  }
+  delay(2500); 
+}
+
 void loop() {
+  bootTest();
   if (Serial.available()) {
     if (Serial.read() == 0xff) {
       // reads in a two index array from ChucK

@@ -2588,34 +2588,6 @@ grid 2.54 mm</description>
 <label x="30.48" y="121.92" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="N$17" class="0">
-<segment>
-<pinref part="U2" gate="G$1" pin="43"/>
-<wire x1="27.94" y1="60.96" x2="30.48" y2="60.96" width="0.1524" layer="91"/>
-<label x="30.48" y="60.96" size="1.27" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="N$28" class="0">
-<segment>
-<pinref part="U2" gate="G$1" pin="48"/>
-<wire x1="27.94" y1="48.26" x2="30.48" y2="48.26" width="0.1524" layer="91"/>
-<label x="30.48" y="48.26" size="1.27" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="N$29" class="0">
-<segment>
-<pinref part="U2" gate="G$1" pin="49"/>
-<wire x1="27.94" y1="45.72" x2="30.48" y2="45.72" width="0.1524" layer="91"/>
-<label x="30.48" y="45.72" size="1.27" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="N$32" class="0">
-<segment>
-<pinref part="U2" gate="G$1" pin="50"/>
-<wire x1="27.94" y1="43.18" x2="30.48" y2="43.18" width="0.1524" layer="91"/>
-<label x="30.48" y="43.18" size="1.27" layer="95" xref="yes"/>
-</segment>
-</net>
 <net name="BLUE" class="0">
 <segment>
 <label x="-43.18" y="107.95" size="1.27" layer="95" xref="yes"/>
@@ -2638,27 +2610,6 @@ grid 2.54 mm</description>
 <pinref part="U2" gate="G$1" pin="41"/>
 <wire x1="27.94" y1="66.04" x2="30.48" y2="66.04" width="0.1524" layer="91"/>
 <label x="30.48" y="66.04" size="1.27" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="N23" class="0">
-<segment>
-<pinref part="U2" gate="G$1" pin="51"/>
-<wire x1="27.94" y1="40.64" x2="30.48" y2="40.64" width="0.1524" layer="91"/>
-<label x="30.48" y="40.64" size="1.27" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="N24" class="0">
-<segment>
-<pinref part="U2" gate="G$1" pin="52"/>
-<wire x1="27.94" y1="38.1" x2="30.48" y2="38.1" width="0.1524" layer="91"/>
-<label x="30.48" y="38.1" size="1.27" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="N25" class="0">
-<segment>
-<pinref part="U2" gate="G$1" pin="53"/>
-<wire x1="27.94" y1="35.56" x2="30.48" y2="35.56" width="0.1524" layer="91"/>
-<label x="30.48" y="35.56" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="N$2" class="0">
